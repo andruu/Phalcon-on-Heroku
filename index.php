@@ -1,6 +1,6 @@
 <?php
 
-// Postgresql Info
+// MySQL Info
 $connection_url = parse_url(getenv('CLEARDB_DATABASE_URL'));
 $db['host'] = $connection_url['host'];
 $db['name'] = explode('/', $connection_url['path'])[1];
