@@ -1,5 +1,3 @@
-SetEnv HEROKU_POSTGRESQL_JADE_URL postgres://feecyzrvkehjuy:LhpGjpv3wsdyqPa9VPRn0o4qZy@ec2-54-243-223-183.compute-1.amazonaws.com:5432/dffnlnojcsgrb8
-SetEnv CLEARDB_DATABASE_URL mysql://bca95f0e289801:b5a9d2a4@us-cdbr-east-02.cleardb.com/heroku_4aa5cbca27eb157?reconnect=true
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
