@@ -1,0 +1,15 @@
+<h1>New Post</h1>
+
+<?php use \Phalcon\Tag as Tag; ?>
+
+<?= Tag::form("posts") ?>
+    <label for="title">Title:</label>
+    <?= Tag::textField("title") ?>
+    
+    <label for="body">Body:</label>
+    <?= Tag::textArea("body") ?>
+
+    <div class="actions">
+      <?= Tag::submitButton(["Save Post", 'class' => 'btn']) ?>
+    </div>
+</form>

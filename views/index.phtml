@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US" ng-app="Site">
+<head>
+  <meta charset="UTF-8">
+  <title>Phalcon on Heroku</title>
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+  body {
+    padding-top:60px;
+  }
+  </style>
+</head>
+<body ng-controller="AppController">
+
+  <!-- Navbar -->
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">Phalcon on Heroku</a>
+        <ul class="nav">
+          <li><a href="/posts/new">New Post</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+
+        <?=$this->getContent()?>
+
+      </div>
+      <div class="span4">
+        <div class="well">
+          <h3>Side Bar</h3>
+          <p>Put some useful information here.</p>
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="http://andru.co">andru.co</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Includes -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.2/angular.min.js"></script>
+  <script type="text/javascript" src="/js/site.js"></script>
+
+</body>
+</html>

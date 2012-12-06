@@ -1,0 +1,21 @@
+<?php $this->partial('posts/_post'); ?>
+<?php use \Phalcon\Tag as Tag; ?>
+<h3>Comments</h3>
+<?= Tag::form("comments") ?>
+    <label for="name">Name:</label>
+    <?= Tag::textField("name") ?>
+    
+    <label for="comment">Comment:</label>
+    <?= Tag::textArea("comment") ?>
+    
+    <?= Tag::hiddenField(['post_id', 'value' => $post->id]) ?>
+
+    <div class="actions">
+      <?= Tag::submitButton(["Save Post", 'class' => 'btn']) ?>
+    </div>
+</form>
+<?php
+foreach ($post->getComments() as $comment) {
+  $this->partial('posts/_comment');
+}
+?>
